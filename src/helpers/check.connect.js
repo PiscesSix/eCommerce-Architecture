@@ -9,8 +9,8 @@ const _SECOND = 5000
 // count connects
 const countConnect = () => {
     const numConection = mongoose.connections.length
-    return console.log(`Number of connections::${numConection}`)
-    // return numConection
+    // return console.log(`Number of connections::${numConection}`)
+    return numConection
 }
 
 // check over load connects
