@@ -7,10 +7,10 @@ const morgan = require('morgan')
 
 const app = express()
 
-
 console.log(`Process::`, process.env)
 // init middlewares
-/*Khi sử dụng product thì morgan("combined"), morgan("common"), morgan("short"), morgan("tiny")
+/*
+    Khi sử dụng product thì morgan("combined"), morgan("common"), morgan("short"), morgan("tiny")
 */
 app.use(morgan("dev"))
 app.use(helmet())
@@ -23,11 +23,7 @@ countConnect()
 checkOverload()
 
 // init router
-app.get('/', (req, res, next) => {
-    return res.status(200).json({
-        message: 'Welcome !!',
-    })
-})
+app.use('', require('./routes'))
 
 // handling error
 
